@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>CAI 教學遊戲七種範例</title>
+    <meta
+      name="description"
+      content="七種可替換 JSON 或 CSV 題庫的 CAI 教學遊戲範例，含全班搶答。"
+    />
+    <link rel="icon" href="./favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="app-header">
+      <div>
+        <p class="eyebrow">CAI GAME TEMPLATES</p>
+        <h1>七種可換題庫的教學小遊戲</h1>
+      </div>
+      <div class="header-actions">
+        <a id="downloadTemplate" class="upload-button" href="./data/quiz.json" download>下載範例題庫</a>
+        <a class="upload-button" href="./data/audit.csv" download>下載選擇題 CSV</a>
+        <label class="upload-button">
+          <input id="fileInput" type="file" accept=".json,.csv" />
+          上傳題庫
+        </label>
+        <button id="reloadButton" type="button">重新載入範例題庫</button>
+      </div>
+    </header>
+
+    <main class="app-shell">
+      <aside class="game-nav" aria-label="選擇遊戲範例">
+        <button class="nav-card is-active" type="button" data-game="quiz">
+          <span>01</span>
+          <strong>選擇題闖關</strong>
+          <small>JSON：概念辨識、即時回饋</small>
+        </button>
+        <button class="nav-card" type="button" data-game="memory">
+          <span>02</span>
+          <strong>配對記憶</strong>
+          <small>JSON：名詞與定義、雙語配對</small>
+        </button>
+        <button class="nav-card" type="button" data-game="sort">
+          <span>03</span>
+          <strong>排序挑戰</strong>
+          <small>CSV：流程、年代、步驟</small>
+        </button>
+        <button class="nav-card" type="button" data-game="category">
+          <span>04</span>
+          <strong>分類任務</strong>
+          <small>CSV：類型判斷、概念歸類</small>
+        </button>
+        <button class="nav-card" type="button" data-game="scenario">
+          <span>05</span>
+          <strong>情境判斷</strong>
+          <small>JSON：分支案例、決策練習</small>
+        </button>
+        <button class="nav-card" type="button" data-game="audit">
+          <span>06</span><strong>選項鑑識</strong><small>直接沿用選擇題，逐項判斷與說理</small>
+        </button>
+        <a class="live-game-link" href="/live-quiz/index.html"><span>07</span><strong>全班搶答</strong><small>手機加入房間 · 依答對順序計分</small></a>
+      </aside>
+
+      <section class="workbench">
+        <div class="game-toolbar">
+          <div>
+            <p id="gameType">JSON 題庫</p>
+            <h2 id="gameTitle">載入中</h2>
+          </div>
+          <div class="score-strip" aria-label="遊戲狀態">
+            <span>分數 <b id="scoreValue">0</b></span>
+            <span>進度 <b id="progressValue">0 / 0</b></span>
+          </div>
+        </div>
+
+        <div id="gameRoot" class="game-root" aria-live="polite"></div>
+
+        <details class="schema-panel">
+          <summary>題庫格式</summary>
+          <pre id="schemaText"></pre>
+        </details>
+      </section>
+    </main>
+
+    <script src="./app.js"></script>
+  </body>
+</html>

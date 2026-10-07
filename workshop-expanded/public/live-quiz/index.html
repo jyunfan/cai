@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>全班搶答｜互動媒體工作坊</title><link rel="stylesheet" href="./styles.css"></head>
+<body>
+  <header><a href="/game-examples/index.html">教學遊戲</a><span>07 / LIVE CLASSROOM</span><a href="/">工作坊簡報</a></header>
+  <main>
+    <div class="page-title"><div><p class="eyebrow">一起想，搶先答</p><h1>全班搶答</h1></div><div class="score-rule" aria-label="答對得分"><span>第 1 位 <b>+5</b></span><span>第 2 位 <b>+4</b></span><span>第 3 位 <b>+3</b></span><span>第 4 位 <b>+2</b></span><span>其餘 <b>+1</b></span></div></div>
+    <p id="error" role="alert" hidden></p>
+    <section id="setup">
+      <div class="role-tabs" role="tablist" aria-label="參加方式"><button id="studentTab" role="tab" aria-selected="true" aria-controls="studentPanel">學生加入</button><button id="hostTab" role="tab" aria-selected="false" aria-controls="hostPanel">老師開房</button></div>
+      <div class="setup-grid">
+        <div>
+          <form id="studentPanel" role="tabpanel" aria-labelledby="studentTab"><h2>準備好就加入</h2><label>房號<input id="roomCode" name="room" maxlength="6" minlength="6" autocomplete="off" required placeholder="6 碼房號" pattern="[A-Za-z0-9]{6}"></label><label>暱稱<input id="nickname" maxlength="20" required autocomplete="nickname" placeholder="課堂暱稱，不需真實姓名"></label><button class="primary" type="submit">加入房間</button></form>
+          <form id="hostPanel" role="tabpanel" aria-labelledby="hostTab" hidden><h2>建立這一堂的挑戰</h2><label>題庫<input id="bankFile" type="file" accept=".csv,.json"></label><p id="bankStatus">載入範例題庫中…</p><label>每題作答時間<select id="seconds"><option value="15">15 秒</option><option value="30" selected>30 秒</option><option value="60">60 秒</option><option value="120">120 秒</option></select></label><div class="form-links"><a href="./sample.csv" download>單選 CSV 範本</a><a href="/game-examples/data/quiz.json" download>JSON 範本</a></div><button class="primary" type="submit">建立房間</button></form>
+        </div>
+        <aside class="setup-aside"><img src="/images/game-quiz.png" alt="選擇題教學範例"><h2>同一道題，全班挑戰</h2><p>每人每題一次機會。答錯 0 分，答對按伺服器收到答案的順序計分。</p><p>網路速度可能影響名次；適合暖身與複習，不宜單獨作為正式成績。</p><small>最多 100 人・房間有效 24 小時・僅使用課堂暱稱</small></aside>
+      </div>
+    </section>
+    <section id="room" hidden></section>
+  </main>
+  <footer>互動媒體融入教學 · 蔡濬帆 · 致理科技大學 K53 · 2026/10/07</footer>
+  <script type="module" src="./app.js"></script>
+</body></html>

@@ -1,0 +1,86 @@
+{
+  "title": "選擇題闖關：學術英文摘要",
+  "questions": [
+    {
+      "prompt": "The study aims to examine the relationship between sleep quality and academic performance. 這句最接近哪一種研究目的？",
+      "hint": "先看 aims to examine 和 relationship。",
+      "choices": [
+        {
+          "text": "描述兩個變項之間的關聯",
+          "correct": true,
+          "feedback": "正確。relationship 通常指向關聯或相關。"
+        },
+        {
+          "text": "證明某個教學方法一定有效",
+          "correct": false,
+          "feedback": "這個句子沒有宣稱因果，也沒有提到教學方法。"
+        },
+        {
+          "text": "整理過去研究的文獻缺口",
+          "correct": false,
+          "feedback": "文獻缺口通常會出現 previous studies、gap、however 等線索。"
+        },
+        {
+          "text": "比較兩篇論文的寫作風格",
+          "correct": false,
+          "feedback": "題目沒有比較文本或寫作特徵。"
+        }
+      ],
+      "explanation": "學生可練習從摘要動詞判斷研究目的。"
+    },
+    {
+      "prompt": "哪一個詞最常用來表示研究的主要發現？",
+      "hint": "想想 abstract 的 Results 段落。",
+      "choices": [
+        {
+          "text": "findings",
+          "correct": true,
+          "feedback": "正確。findings 常指研究結果或主要發現。"
+        },
+        {
+          "text": "limitations",
+          "correct": false,
+          "feedback": "limitations 是研究限制。"
+        },
+        {
+          "text": "participants",
+          "correct": false,
+          "feedback": "participants 是研究參與者。"
+        },
+        {
+          "text": "references",
+          "correct": false,
+          "feedback": "references 是參考文獻。"
+        }
+      ],
+      "explanation": "可把 choices 換成任何課程中的容易混淆詞。"
+    },
+    {
+      "prompt": "This paper contributes to the literature by... 這句通常出現在摘要或論文哪一部分？",
+      "hint": "contributes to 表示這篇研究帶來什麼價值。",
+      "choices": [
+        {
+          "text": "研究貢獻或討論",
+          "correct": true,
+          "feedback": "正確。contributes to the literature 是研究貢獻常見句型。"
+        },
+        {
+          "text": "研究倫理審查",
+          "correct": false,
+          "feedback": "倫理審查通常會提到 consent、IRB、ethics approval。"
+        },
+        {
+          "text": "資料清理步驟",
+          "correct": false,
+          "feedback": "資料清理會看到 missing values、coding、exclude 等詞。"
+        },
+        {
+          "text": "問卷題目",
+          "correct": false,
+          "feedback": "問卷題目通常是具體問題或量表項目。"
+        }
+      ],
+      "explanation": "這類題目很適合訓練學生辨識學術句型功能。"
+    }
+  ]
+}

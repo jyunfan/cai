@@ -1,0 +1,1 @@
+CREATE INDEX `live_answers_player_round` ON `live_answers` (`player`,`round`);

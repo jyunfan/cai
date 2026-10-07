@@ -1,0 +1,25 @@
+{
+  "turingPortraits": {
+    "files": ["turing-1.jpg", "turing-2.jpg", "turing-3.jpg"],
+    "peopleInOrder": ["Yoshua Bengio", "Geoffrey Hinton", "Yann LeCun"],
+    "photoSource": "https://gigazine.net/gsc_news/en/20190328-turing-award-2018/",
+    "awardSource": "https://sigai.acm.org/main/2019/04/01/472/",
+    "description": "Photographs reproduced with the ACM award announcement by GIGAZINE. Award year 2018, announced and presented in 2019."
+  },
+  "screenshots": {
+    "files": ["game-quiz.png", "game-feedback.png", "game-sort.png", "game-memory.png", "game-category.png", "game-scenario.png", "game-audit.png", "prompt-demo.png"],
+    "source": "Screenshots of this workshop's local games and presentation."
+  },
+  "generatedIllustrations": [
+    {
+      "file": "workshop-cover.png",
+      "tool": "Built-in image_gen",
+      "prompt": "Create a 16:9 landscape illustration for a university teacher workshop slide, not a poster. No text, no letters, no watermark. A tactile colorful paper-cut and clay-render composition on a clean very pale mint background: a real-looking open laptop with educational matching cards visible on its screen, a teacher's hand arranging question cards beside it, small coral, turquoise, sunny yellow and cobalt-blue learning tokens. Sophisticated editorial educational illustration, clear readable physical objects, asymmetrical composition with laptop centered toward right. Bright soft light, crisp detail, cheerful grown-up design. This will be a large visual on a slide about building interactive teaching games with AI."
+    },
+    {
+      "file": "multimodal.png",
+      "tool": "Built-in image_gen",
+      "prompt": "A bright sophisticated editorial 3D paper-cut illustration for a university teacher presentation about multimodal educational media. Landscape 4:3 image, no text or letters. Clearly arranged physical objects: a turquoise microphone with coral audio waveform sculptural ribbon, a cobalt camera framing a botanical leaf photo, a yellow open book, and a white tablet showing geometric matching tiles. Each object fully visible, equal importance. Clean pale sky-blue studio backdrop, crisp tactile materials, warm daylight, vivid turquoise coral mustard yellow blue with white. A real teaching workbench with diverse media, not a sci-fi brain or robot, not a logo or infographic."
+    }
+  ]
+}
