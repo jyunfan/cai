@@ -1,0 +1,7 @@
+{
+  "hosting": {
+    "site": "cai-agent-workshop-20261007",
+    "public": "dist-google",
+    "ignore": ["firebase.json", "**/.*", "**/node_modules/**"]
+  }
+}
