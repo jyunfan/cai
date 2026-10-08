@@ -158,7 +158,7 @@ function PromptCard({ label, children }: { label: string; children: string }) {
 }
 
 function WorkshopContent({ item, onDemo }: { item: WorkshopSlide; onDemo: () => void }) {
-  return <div className={`workshop-content ${item.image || item.portraits ? "visual-slide" : ""} ${item.portraits ? "award-slide" : ""} ${item.prompt && item.points ? "with-prompt" : ""}`}>
+  return <div className={`workshop-content ${item.image || item.portraits || item.diagram ? "visual-slide" : ""} ${item.portraits ? "award-slide" : ""} ${item.prompt && item.points ? "with-prompt" : ""}`}>
     <div className="workshop-copy">
     {item.points && <ul className="workshop-points">{item.points.map(point => <li key={point}>{point}</li>)}</ul>}
     {item.rows && <div className="workshop-table-wrap"><table className="workshop-table"><thead><tr>{item.rows[0].map(cell => <th key={cell}>{cell}</th>)}</tr></thead><tbody>{item.rows.slice(1).map((row, i) => <tr key={i}>{row.map((cell, j) => <td key={j}>{cell}</td>)}</tr>)}</tbody></table></div>}
@@ -168,6 +168,16 @@ function WorkshopContent({ item, onDemo }: { item: WorkshopSlide; onDemo: () => 
     {item.action === "live" && <a className="workshop-action" href="/live-quiz/index.html?host=1" target="_blank" rel="noreferrer">開啟全班搶答</a>}
     {item.source && <div className="slide-sources">{item.source.map(source => <a key={source.url} href={source.url} target="_blank" rel="noreferrer">{source.title}</a>)}</div>}
     </div>
+    {item.diagram === "mobile-context" && <figure className="mobile-context-diagram" aria-label="從行動需求交給 Agent，再取得可檢查成果的流程圖">
+      <div className="diagram-orbit orbit-a" aria-hidden="true" />
+      <div className="diagram-orbit orbit-b" aria-hidden="true" />
+      <article className="diagram-node request"><span>01</span><b>人在外面</b><small>用手機說清楚需求</small></article>
+      <i className="diagram-arrow">→</i>
+      <article className="diagram-node agent"><span>02</span><b>Agent 接手</b><small>整理資料、製作草稿</small></article>
+      <i className="diagram-arrow">→</i>
+      <article className="diagram-node result"><span>03</span><b>回傳成果</b><small>你檢查，再決定交付</small></article>
+      <figcaption>需求＋資料＋完成條件，讓遠端協作形成可驗收的工作循環。</figcaption>
+    </figure>}
     {item.image && <figure className="slide-visual"><img src={item.image.src} alt={item.image.alt} /><figcaption>{item.image.caption}</figcaption></figure>}
     {item.portraits && <figure className="turing-portraits"><div>{["Yoshua Bengio", "Geoffrey Hinton", "Yann LeCun"].map((name, i) => <div key={name}><img src={`/images/turing-${i + 1}.jpg`} alt={name} /><strong>{name}</strong></div>)}</div><figcaption><b>2018 ACM A.M. Turing Award</b><p>表彰使深度神經網路成為運算重要組成的概念與工程突破</p><p>2019 年公布及頒獎</p><a href="https://gigazine.net/gsc_news/en/20190328-turing-award-2018/" target="_blank" rel="noreferrer">照片：ACM 得獎公告／GIGAZINE 轉載</a></figcaption></figure>}
   </div>;
